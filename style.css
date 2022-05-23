@@ -41,25 +41,21 @@ body {
     }
 }
 .container{
-    margin: 80px auto;
-    width: 90%;
-    top:0;
-    left: 0;
-    padding:15px;
-    position: relative;
-    display: inline-block;
+   max-width: 950px;
+  margin: 0 auto;
+  display: grid;
+  padding: 32px;
+  grid-template-columns: 300px 1fr;
+  gap: 16px;
+  align-items: center;
+  max-width: 950px;
+  margin: 0 auto;
+  font: 16px Arial;
 }
 img{
-    float: left;
-    width:450px;
-    height:260px;
-    padding: 10px;
-}
-.text{
-    text-align:justify;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    padding:25px;
+   left: 0;
+    max-width: 100%;
+    height: auto;
 }
 .contact-box{
     width: 700px;
@@ -114,13 +110,24 @@ form{
     color: #fff;
  }
 @media (max-width: 786px) {
-    img{
-        width:100%;
-        height:auto;
-        float:none;
+    .centered {
+        font-size: 65px;
     }
-    .text{
-        padding: 20px 0px 0px 20px; 
+    .container {
+        display: block;
+        font-size: 90%;
+      }
+    p {
+        position: relative;
+        padding-bottom: 32px;
+       
+      }
+      img{
+        max-width: 400px;
+        height: auto;
+     	left: 50%;
+	    transform: translate(-50%);
+        position: relative;
     }
     .contact-box{
         width: 500px;
@@ -135,20 +142,16 @@ form{
         height:650px;
     }
     .centered {
-        font-size: 60px;
+        font-size: 45px;
     }
     img{
-        width:70%;
-        height:auto;
-        margin-left: 50px;
-    }
-    .text{
-        padding: 10px 0px 0px 20px; 
+       max-width: 100%;
+       height: auto;
     }
     .contact-box{
-        width: 350px;
+        width: 300px;
     }
     .input-field{
-         width: 250px;
+         width: 200px;
     } 
   }
